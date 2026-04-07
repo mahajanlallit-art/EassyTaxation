@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Careers – EASSY Taxation, Pune</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1B3A;--navy-mid:#112247;--gold:#C9A84C;--gold-light:#E4C97A;--white:#fff;--muted:#8a9bb5;--border:rgba(201,168,76,.2);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+.cxl{max-width:1280px;margin:0 auto;padding:0 40px;}
+.topbar{background:var(--navy-mid);border-bottom:1px solid var(--border);padding:9px 0;font-size:13px;}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.topbar-contact{display:flex;gap:20px;color:var(--muted);}
+.topbar-contact a{color:var(--gold);text-decoration:none;}
+nav{background:var(--navy);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:42px;height:42px;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:21px;color:var(--navy);}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:var(--white);}
+.logo-tag{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+.nav-links a{display:block;padding:8px 13px;color:var(--muted);text-decoration:none;font-size:14px;border-radius:6px;transition:all .2s;}
+.nav-links a:hover,.nav-links a.act{color:var(--gold);background:rgba(201,168,76,.08);}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;font-weight:700!important;border-radius:8px!important;}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;}
+.hbg span{width:24px;height:2px;background:var(--white);border-radius:2px;}
+/* PAGE HERO */
+.page-hero{background:var(--navy-mid);border-bottom:1px solid var(--border);padding:60px 0;}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,52px);font-weight:700;}
+.page-hero h1 em{color:var(--gold);font-style:italic;}
+/* WHY WORK */
+.perks-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:60px 0;}
+.perk{background:var(--navy-mid);border:1px solid var(--border);border-radius:12px;padding:22px;text-align:center;transition:all .25s;}
+.perk:hover{border-color:rgba(201,168,76,.45);transform:translateY(-3px);}
+.perk-ico{font-size:28px;margin-bottom:12px;}
+.perk-title{font-size:15px;font-weight:600;margin-bottom:6px;}
+.perk-desc{font-size:12px;color:var(--muted);line-height:1.6;}
+/* JOBS */
+.job-card{background:var(--navy-mid);border:1px solid var(--border);border-radius:14px;padding:28px;margin-bottom:20px;transition:all .25s;}
+.job-card:hover{border-color:rgba(201,168,76,.45);transform:translateX(4px);}
+.job-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.job-title{font-size:18px;font-weight:700;font-family:'Cormorant Garamond',serif;margin-bottom:6px;}
+.job-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+.jtag{font-size:11px;padding:3px 10px;border-radius:4px;background:rgba(255,255,255,.05);color:var(--muted);}
+.jtag.gold{background:rgba(201,168,76,.1);color:var(--gold);border:1px solid var(--border);}
+.job-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.job-skills{font-size:12px;color:var(--muted);margin-bottom:16px;}
+.job-skills strong{color:var(--gold);}
+.apply-btn{background:var(--gold);color:var(--navy);padding:10px 24px;border-radius:8px;border:none;font-size:13px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+.apply-btn:hover{background:var(--gold-light);transform:translateY(-1px);}
+.open-tag{background:rgba(100,200,100,.1);color:#7ed87e;border:1px solid rgba(100,200,100,.2);padding:4px 12px;border-radius:20px;font-size:11px;}
+/* APPLY MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.87);z-index:2000;display:none;overflow-y:auto;padding:40px 20px;}
+.modal-overlay.open{display:flex;align-items:flex-start;justify-content:center;}
+.modal{background:var(--navy-mid);border:1px solid var(--border);border-radius:20px;width:100%;max-width:660px;overflow:hidden;margin-top:20px;}
+.modal-head{padding:28px 28px 0;display:flex;justify-content:space-between;align-items:flex-start;}
+.modal-head h3{font-size:20px;font-weight:700;}
+.modal-close{background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer;}
+.modal-close:hover{color:var(--gold);}
+.modal-body{padding:24px 28px 28px;}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fg{margin-bottom:14px;}
+.f-lbl{display:block;font-size:11px;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:.8px;}
+.f-inp,.f-sel,.f-ta{width:100%;padding:10px 13px;background:var(--navy);border:1px solid var(--border);border-radius:8px;color:var(--white);font-size:13px;outline:none;font-family:'DM Sans',sans-serif;transition:border-color .2s;}
+.f-inp:focus,.f-sel:focus,.f-ta:focus{border-color:var(--gold);}
+.f-ta{height:90px;resize:vertical;}
+.f-sel option{background:var(--navy-mid);}
+.f-btn{width:100%;padding:13px;background:var(--gold);color:var(--navy);border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.f-btn:hover{background:var(--gold-light);}
+.f-note{font-size:11px;color:var(--muted);margin-top:8px;text-align:center;}
+/* FOOTER */
+footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:30px 0;margin-top:60px;}
+.f-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.f-bot p{font-size:12px;color:var(--muted);}
+.fab{position:fixed;bottom:26px;right:26px;z-index:999;background:var(--gold);color:var(--navy);width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 8px 24px rgba(201,168,76,.4);}
+@media(max-width:900px){.perks-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:768px){.cxl{padding:0 20px;}.nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--navy-mid);border-bottom:1px solid var(--border);padding:12px 20px;gap:2px;}.nav-links.open{display:flex;}.hbg{display:flex;}nav{position:relative;}.topbar-contact{display:none;}.f-row{grid-template-columns:1fr;}.modal-body,.modal-head{padding:20px;}.perks-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="cxl topbar-inner"><div class="topbar-contact"><span>📞 <a href="tel:+917972136151">+91 7972136151</a></span><span>✉️ <a href="mailto:eassytaxation@gmail.com">eassytaxation@gmail.com</a></span></div><a href="index.html#contact" style="color:var(--gold);font-size:13px">📅 Free Consultation →</a></div></div>
+<nav>
+  <div class="cxl nav-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">ET</div><div><div class="logo-name">EASSY Taxation</div><div class="logo-tag">Expert · Efficient · Ethical</div></div></a>
+    <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl"><li><a href="index.html">Home</a></li><li><a href="tools.html">Tools</a></li><li><a href="blog.html">Blog</a></li><li><a href="tax-updates.html">Tax Updates</a></li><li><a href="careers.html" class="act">Careers</a></li><li><a href="index.html#contact" class="nav-cta">Get Started</a></li></ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="cxl">
+    <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Join Our Team</div>
+    <h1>Build Your Career with<br><em>EASSY Taxation</em></h1>
+    <p style="color:var(--muted);font-size:15px;margin-top:12px;max-width:540px">We are a growing CA and legal services firm based in Akurdi, Pune. Join us and grow alongside India's best taxation and compliance professionals.</p>
+  </div>
+</div>
+
+<div style="padding:70px 0">
+  <div class="cxl">
+
+    <!-- WHY JOIN US -->
+    <div style="text-align:center;margin-bottom:40px">
+      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px">Why Join Us</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3vw,40px);font-weight:700">A Place to Learn, <em style="color:var(--gold);font-style:italic">Grow</em> & Excel</div>
+    </div>
+    <div class="perks-grid">
+      <div class="perk"><div class="perk-ico">🎓</div><div class="perk-title">Learning First</div><div class="perk-desc">Exposure to diverse industries, complex cases, and the latest tax law changes.</div></div>
+      <div class="perk"><div class="perk-ico">📈</div><div class="perk-title">Career Growth</div><div class="perk-desc">Clear growth path with regular performance reviews and promotions.</div></div>
+      <div class="perk"><div class="perk-ico">🤝</div><div class="perk-title">Supportive Team</div><div class="perk-desc">Collaborative culture where senior experts mentor you every step of the way.</div></div>
+      <div class="perk"><div class="perk-ico">💰</div><div class="perk-title">Competitive Pay</div><div class="perk-desc">Market-competitive salaries with performance bonuses and incentives.</div></div>
+    </div>
+
+    <!-- CURRENT OPENINGS -->
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:28px">
+      <div>
+        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Current Openings</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3vw,36px);font-weight:700">Open <em style="color:var(--gold);font-style:italic">Positions</em></div>
+      </div>
+      <div style="font-size:13px;color:var(--muted)">Can't find a match? <a href="mailto:eassytaxation@gmail.com" style="color:var(--gold)">Send us your resume</a></div>
+    </div>
+
+    <div id="jobs-list"></div>
+
+    <!-- OPEN APPLICATION -->
+    <div style="background:rgba(201,168,76,.05);border:1px solid var(--border);border-radius:16px;padding:36px;text-align:center;margin-top:40px">
+      <div style="font-size:28px;margin-bottom:12px">📬</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;margin-bottom:8px">Don't See a Matching Role?</div>
+      <div style="font-size:14px;color:var(--muted);max-width:440px;margin:0 auto 20px">We are always looking for talented CA Articleship trainees, accounts executives, and legal associates. Send us your resume!</div>
+      <button class="apply-btn" onclick="openApply('general')">📩 Submit Open Application</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- APPLY MODAL -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <h3>Apply for Position</h3>
+        <div id="modal-job-title" style="font-size:13px;color:var(--gold);margin-top:4px"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="f-row">
+        <div class="fg"><label class="f-lbl">Full Name *</label><input class="f-inp" id="a-name" type="text" placeholder="Your full name"></div>
+        <div class="fg"><label class="f-lbl">Phone *</label><input class="f-inp" id="a-phone" type="tel" placeholder="+91 XXXXX XXXXX"></div>
+      </div>
+      <div class="fg"><label class="f-lbl">Email Address *</label><input class="f-inp" id="a-email" type="email" placeholder="your@email.com"></div>
+      <div class="f-row">
+        <div class="fg"><label class="f-lbl">Position Applying For</label><select class="f-sel" id="a-pos"><option>Loading...</option></select></div>
+        <div class="fg"><label class="f-lbl">Current / Last CTC</label><input class="f-inp" id="a-ctc" type="text" placeholder="e.g. 3 LPA or Fresher"></div>
+      </div>
+      <div class="f-row">
+        <div class="fg"><label class="f-lbl">Experience</label><input class="f-inp" id="a-exp" type="text" placeholder="e.g. 2 years"></div>
+        <div class="fg"><label class="f-lbl">Current Location</label><input class="f-inp" id="a-loc" type="text" placeholder="City"></div>
+      </div>
+      <div class="fg"><label class="f-lbl">Qualifications</label><input class="f-inp" id="a-qual" type="text" placeholder="e.g. B.Com, CA Finalist, LLB"></div>
+      <div class="fg"><label class="f-lbl">About You / Cover Note</label><textarea class="f-ta" id="a-msg" placeholder="Tell us why you are a great fit..."></textarea></div>
+      <div class="fg"><label class="f-lbl">Resume Link (optional)</label><input class="f-inp" id="a-resume" type="url" placeholder="Google Drive / LinkedIn / Dropbox link to your resume"></div>
+      <button class="f-btn" onclick="submitApp()">Submit Application →</button>
+      <div class="f-note">We review all applications and reach out within 3–5 business days.</div>
+      <div id="app-success" style="display:none;margin-top:14px;padding:12px;background:rgba(100,200,100,.1);border:1px solid rgba(100,200,100,.3);border-radius:8px;font-size:13px;color:#7ed87e;text-align:center">✅ Application submitted! We'll review and contact you soon.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="cxl f-bot">
+    <p>© 2025 <span style="color:var(--gold)">EASSY Taxation</span>. Akurdi, Pune. 📞 <a href="tel:+917972136151" style="color:var(--gold);text-decoration:none">+91 7972136151</a></p>
+    <div style="display:flex;gap:16px"><a href="index.html" style="color:var(--muted);text-decoration:none;font-size:13px">Home</a><a href="blog.html" style="color:var(--muted);text-decoration:none;font-size:13px">Blog</a><a href="tools.html" style="color:var(--muted);text-decoration:none;font-size:13px">Tools</a></div>
+  </div>
+</footer>
+<a href="https://wa.me/917972136151" class="fab">💬</a>
+
+<script>
+const ET = { get:(k,d=[])=>{try{return JSON.parse(localStorage.getItem('et_'+k))||d;}catch{return d;}}, set:(k,v)=>localStorage.setItem('et_'+k,JSON.stringify(v)), uid:()=>Date.now().toString(36)+Math.random().toString(36).slice(2) };
+const fmtDate = d => new Date(d).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+const deptIcons = {'Taxation':'📊','Accounts':'📒','HR & Staffing':'👥','Legal':'⚖️','Finance':'💼','CA Articleship':'🎓'};
+
+function renderJobs() {
+  const jobs = ET.get('jobs').filter(j=>j.active);
+  const list = document.getElementById('jobs-list');
+  if(!jobs.length){list.innerHTML='<div style="text-align:center;padding:40px;color:var(--muted)"><div style="font-size:32px;margin-bottom:12px">📭</div>No open positions right now. Check back soon or submit an open application below.</div>';return;}
+  list.innerHTML = jobs.map(j=>`
+    <div class="job-card">
+      <div class="job-header">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+            <div style="font-size:20px">${deptIcons[j.dept]||'💼'}</div>
+            <div class="job-title">${j.title}</div>
+          </div>
+          <div class="job-tags">
+            <span class="jtag gold">${j.dept}</span>
+            <span class="jtag">📍 ${j.loc}</span>
+            <span class="jtag">⏱ ${j.type}</span>
+            <span class="jtag">🎯 ${j.exp}</span>
+            <span class="open-tag">● Open</span>
+          </div>
+          <div class="job-desc">${j.desc}</div>
+          <div class="job-skills">🔑 <strong>Key Skills:</strong> ${j.skills}</div>
+          <div style="font-size:11px;color:var(--muted)">Posted: ${fmtDate(j.date)}</div>
+        </div>
+        <button class="apply-btn" onclick="openApply('${j.id}')">Apply Now →</button>
+      </div>
+    </div>`).join('');
+}
+
+function openApply(jobId) {
+  const jobs = ET.get('jobs');
+  const job = jobId==='general' ? null : jobs.find(j=>j.id===jobId);
+  document.getElementById('modal-job-title').textContent = job ? job.title : 'Open Application';
+  // Populate position select
+  const sel = document.getElementById('a-pos');
+  const opts = jobId!=='general' && job ? [job.title] : jobs.filter(j=>j.active).map(j=>j.title);
+  opts.push('Open Application (General)');
+  sel.innerHTML = opts.map(o=>`<option${job&&o===job.title?' selected':''}>${o}</option>`).join('');
+  document.getElementById('app-success').style.display='none';
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(){ document.getElementById('modal').classList.remove('open'); }
+
+function submitApp() {
+  const name=document.getElementById('a-name').value.trim();
+  const phone=document.getElementById('a-phone').value.trim();
+  const email=document.getElementById('a-email').value.trim();
+  if(!name||!phone||!email){alert('Please fill in Name, Phone, and Email.');return;}
+  const apps=ET.get('apps');
+  apps.unshift({id:ET.uid(),name,phone,email,position:document.getElementById('a-pos').value,ctc:document.getElementById('a-ctc').value,exp:document.getElementById('a-exp').value,loc:document.getElementById('a-loc').value,qual:document.getElementById('a-qual').value,msg:document.getElementById('a-msg').value,resume:document.getElementById('a-resume').value,date:new Date().toISOString(),status:'New'});
+  ET.set('apps',apps);
+  document.getElementById('app-success').style.display='block';
+  ['a-name','a-phone','a-email','a-ctc','a-exp','a-loc','a-qual','a-msg','a-resume'].forEach(id=>document.getElementById(id).value='');
+  setTimeout(closeModal, 4000);
+}
+renderJobs();
+</script>
+</body>
+</html>

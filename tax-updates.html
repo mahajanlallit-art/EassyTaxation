@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Latest Tax Updates – EASSY Taxation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1B3A;--navy-mid:#112247;--gold:#C9A84C;--white:#fff;--muted:#8a9bb5;--border:rgba(201,168,76,.2);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+.cxl{max-width:1280px;margin:0 auto;padding:0 40px;}
+.topbar{background:var(--navy-mid);border-bottom:1px solid var(--border);padding:9px 0;font-size:13px;}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.topbar-contact{display:flex;gap:20px;color:var(--muted);}
+.topbar-contact a{color:var(--gold);text-decoration:none;}
+nav{background:var(--navy);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:42px;height:42px;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:21px;color:var(--navy);}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:var(--white);}
+.logo-tag{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+.nav-links a{display:block;padding:8px 13px;color:var(--muted);text-decoration:none;font-size:14px;border-radius:6px;transition:all .2s;}
+.nav-links a:hover,.nav-links a.act{color:var(--gold);background:rgba(201,168,76,.08);}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;font-weight:700!important;border-radius:8px!important;}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;}
+.hbg span{width:24px;height:2px;background:var(--white);border-radius:2px;}
+.page-hero{background:var(--navy-mid);border-bottom:1px solid var(--border);padding:60px 0;}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,50px);font-weight:700;}
+.page-hero h1 em{color:var(--gold);font-style:italic;}
+/* LAYOUT */
+.page-layout{display:grid;grid-template-columns:1fr 280px;gap:36px;padding:60px 0;}
+/* SOURCE TABS */
+.src-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
+.src-tab{padding:8px 16px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;}
+.src-tab.on{background:rgba(201,168,76,.1);border-color:var(--gold);color:var(--gold);}
+/* NEWS CARDS */
+.news-card{background:var(--navy-mid);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:16px;transition:all .25s;}
+.news-card:hover{border-color:rgba(201,168,76,.45);transform:translateX(4px);}
+.news-src{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
+.news-title a{font-size:15px;font-weight:500;color:var(--white);text-decoration:none;line-height:1.5;}
+.news-title a:hover{color:var(--gold);}
+.news-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-top:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.news-meta{display:flex;gap:12px;margin-top:10px;font-size:11px;color:var(--muted);}
+/* LOADING */
+.loading{text-align:center;padding:60px;color:var(--muted);}
+.spinner{width:32px;height:32px;border:2px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px;}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* SIDEBAR */
+.sidebar-box{background:var(--navy-mid);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:22px;}
+.sidebar-box h4{font-size:12px;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;}
+.due-item{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.due-item:last-child{border-bottom:none;}
+.due-name{font-size:13px;color:var(--white);}
+.due-date{font-size:12px;font-weight:600;color:var(--gold);}
+.due-cat{font-size:10px;padding:2px 8px;border-radius:4px;background:rgba(201,168,76,.1);color:var(--gold);}
+.link-item{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);text-decoration:none;}
+.link-item:last-child{border-bottom:none;}
+.link-item:hover .li-name{color:var(--gold);}
+.li-ico{font-size:18px;}
+.li-name{font-size:13px;color:var(--muted);transition:color .2s;}
+/* FOOTER */
+footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:28px 0;}
+.f-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.f-bot p{font-size:12px;color:var(--muted);}
+.fab{position:fixed;bottom:26px;right:26px;z-index:999;background:var(--gold);color:var(--navy);width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 8px 24px rgba(201,168,76,.4);}
+@media(max-width:900px){.page-layout{grid-template-columns:1fr;}}
+@media(max-width:768px){.cxl{padding:0 20px;}.nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--navy-mid);border-bottom:1px solid var(--border);padding:12px 20px;gap:2px;}.nav-links.open{display:flex;}.hbg{display:flex;}nav{position:relative;}.topbar-contact{display:none;}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="cxl topbar-inner"><div class="topbar-contact"><span>📞 <a href="tel:+917972136151">+91 7972136151</a></span><span>✉️ <a href="mailto:eassytaxation@gmail.com">eassytaxation@gmail.com</a></span></div><a href="index.html#contact" style="color:var(--gold);font-size:13px">📅 Free Consultation →</a></div></div>
+<nav>
+  <div class="cxl nav-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">ET</div><div><div class="logo-name">EASSY Taxation</div><div class="logo-tag">Expert · Efficient · Ethical</div></div></a>
+    <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl"><li><a href="index.html">Home</a></li><li><a href="tools.html">Tools</a></li><li><a href="blog.html">Blog</a></li><li><a href="tax-updates.html" class="act">Tax Updates</a></li><li><a href="careers.html">Careers</a></li><li><a href="index.html#contact" class="nav-cta">Get Started</a></li></ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="cxl">
+    <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Live Updates</div>
+    <h1>Latest <em>Taxation</em> News & Updates</h1>
+    <p style="color:var(--muted);font-size:15px;margin-top:10px;max-width:540px">Auto-fetched news from Income Tax Dept., CBIC, Finance Ministry, EPFO, and top financial publications.</p>
+  </div>
+</div>
+
+<div class="cxl page-layout">
+  <div>
+    <!-- Source Tabs -->
+    <div class="src-tabs" id="src-tabs"></div>
+    <div id="news-container"><div class="loading"><div class="spinner"></div><div>Fetching latest updates...</div></div></div>
+  </div>
+  <!-- Sidebar -->
+  <div>
+    <div class="sidebar-box">
+      <h4>📅 Upcoming Due Dates</h4>
+      <div class="due-item"><span class="due-name">GSTR-1 (Monthly)</span><span class="due-date">11th <span class="due-cat">GST</span></span></div>
+      <div class="due-item"><span class="due-name">GSTR-3B</span><span class="due-date">20th <span class="due-cat">GST</span></span></div>
+      <div class="due-item"><span class="due-name">TDS Deposit</span><span class="due-date">7th/30th <span class="due-cat">TDS</span></span></div>
+      <div class="due-item"><span class="due-name">PF / ESIC</span><span class="due-date">15th <span class="due-cat">PF</span></span></div>
+      <div class="due-item"><span class="due-name">ITR Filing</span><span class="due-date">31 Jul <span class="due-cat">IT</span></span></div>
+      <div class="due-item"><span class="due-name">Advance Tax Q1</span><span class="due-date">15 Jun <span class="due-cat">IT</span></span></div>
+      <div class="due-item"><span class="due-name">TDS Q1 Return</span><span class="due-date">31 Jul <span class="due-cat">TDS</span></span></div>
+    </div>
+    <div class="sidebar-box">
+      <h4>🔗 Key Portals</h4>
+      <a class="link-item" href="https://www.incometax.gov.in" target="_blank"><span class="li-ico">💰</span><span class="li-name">Income Tax e-Filing</span></a>
+      <a class="link-item" href="https://www.gst.gov.in" target="_blank"><span class="li-ico">🏢</span><span class="li-name">GST Portal</span></a>
+      <a class="link-item" href="https://www.tdscpc.gov.in" target="_blank"><span class="li-ico">📋</span><span class="li-name">TRACES (TDS)</span></a>
+      <a class="link-item" href="https://www.mca.gov.in" target="_blank"><span class="li-ico">🏗️</span><span class="li-name">MCA / ROC Portal</span></a>
+      <a class="link-item" href="https://unifiedportal-mem.epfindia.gov.in" target="_blank"><span class="li-ico">👷</span><span class="li-name">EPFO Member Portal</span></a>
+      <a class="link-item" href="https://maharera.mahaonline.gov.in" target="_blank"><span class="li-ico">🏠</span><span class="li-name">MahaRERA</span></a>
+    </div>
+    <div class="sidebar-box" style="background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.4)">
+      <h4 style="color:var(--white)">📩 Get Tax Alerts</h4>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:14px">Stay compliant. Our team sends you deadline reminders.</p>
+      <a href="index.html#contact" style="display:block;background:var(--gold);color:var(--navy);padding:10px;text-align:center;border-radius:8px;font-weight:700;text-decoration:none;font-size:13px">Subscribe to Alerts →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="cxl f-bot">
+    <p>© 2025 <span style="color:var(--gold)">EASSY Taxation</span>. Akurdi, Pune.</p>
+    <div style="display:flex;gap:16px"><a href="index.html" style="color:var(--muted);text-decoration:none;font-size:13px">Home</a><a href="blog.html" style="color:var(--muted);text-decoration:none;font-size:13px">Blog</a><a href="tools.html" style="color:var(--muted);text-decoration:none;font-size:13px">Tools</a></div>
+  </div>
+</footer>
+<a href="https://wa.me/917972136151" class="fab">💬</a>
+
+<script>
+const SOURCES = [
+  { id:'all', label:'All Sources' },
+  { id:'finance', label:'Finance Ministry', rss:'https://pib.gov.in/RSSFeed.aspx?ModID=6&pid=1' },
+  { id:'bs', label:'Business Standard', rss:'https://www.business-standard.com/rss/finance-53.rss' },
+  { id:'et', label:'Economic Times', rss:'https://economictimes.indiatimes.com/markets/rss.cms' },
+];
+
+const STATIC = [
+  {title:'Income Tax Bill 2025 Introduced in Parliament – Key Changes Explained',link:'https://www.incometax.gov.in',date:'Feb 2025',src:'Finance Ministry',desc:'The new Income Tax Bill 2025 proposes to replace the 63-year-old Income Tax Act 1961 with a simplified, taxpayer-friendly law.'},
+  {title:'No Tax on Income up to ₹12 Lakh in New Regime – Budget 2025 Highlights',link:'https://www.incometax.gov.in',date:'Feb 2025',src:'CBDT',desc:'Finance Minister announced major relief for salaried taxpayers. The rebate u/s 87A extended to ₹60,000 under new regime for FY 2025-26.'},
+  {title:'GST Collection Crosses ₹1.96 Lakh Crore in March 2025 – Record High',link:'https://www.gst.gov.in',date:'Apr 2025',src:'CBIC',desc:'India\'s GST collection crossed the ₹1.96 lakh crore mark in March 2025, marking a new record, reflecting strong economic activity and improved compliance.'},
+  {title:'GSTR-9 and GSTR-9C Exemption for Small Taxpayers – FY 2024-25',link:'https://www.gst.gov.in',date:'Mar 2025',src:'CBIC',desc:'Taxpayers with annual aggregate turnover up to ₹2 crore are exempted from filing GSTR-9 for FY 2024-25. GSTR-9C self-certification mandatory above ₹5 crore.'},
+  {title:'TDS Rate on Rent Reduced to 2% – Applicable from 1 October 2024',link:'https://www.incometax.gov.in',date:'Oct 2024',src:'CBDT',desc:'TDS on rent under Section 194-IB for individuals/HUF reduced from 5% to 2% effective 1 October 2024, as announced in Union Budget 2024.'},
+  {title:'EPFO Retains PF Interest Rate at 8.25% for FY 2024-25',link:'https://www.epfindia.gov.in',date:'Mar 2025',src:'EPFO',desc:'The Employees Provident Fund Organisation has retained the interest rate at 8.25% for FY 2024-25, providing stable returns to over 6 crore subscribers.'},
+  {title:'New TDS on Salary – Section 192 Amended for FY 2025-26',link:'https://www.incometax.gov.in',date:'Apr 2025',src:'CBDT',desc:'Employers must now mandatorily consider employee\'s selected regime (New or Old) for TDS on salary calculation from April 2025.'},
+  {title:'ITC Reversal Rule 86B – High Cash Payment Requirement Continues',link:'https://www.gst.gov.in',date:'Feb 2025',src:'CBIC',desc:'Rule 86B requiring 1% of output tax liability to be paid in cash continues for large taxpayers with monthly taxable supply exceeding ₹50 lakh.'},
+  {title:'Income Tax Department Launches New e-Dispute Resolution Scheme 2025',link:'https://www.incometax.gov.in',date:'Mar 2025',src:'Income Tax',desc:'New faceless dispute resolution mechanism launched to settle pending income tax disputes. Taxpayers with income up to ₹50 lakh can apply online.'},
+];
+
+let activeSource = 'all';
+let allNews = [];
+
+function renderTabs() {
+  document.getElementById('src-tabs').innerHTML = SOURCES.map(s=>`<button class="src-tab${s.id===activeSource?' on':''}" onclick="setSource('${s.id}')">${s.label}</button>`).join('');
+}
+
+function setSource(id) { activeSource=id; renderTabs(); renderNews(); }
+
+function renderNews() {
+  const news = activeSource==='all' ? allNews : allNews.filter(n=>n._src===activeSource);
+  const con = document.getElementById('news-container');
+  if(!news.length){ con.innerHTML='<div class="loading"><div>📭</div><div style="margin-top:8px">No updates available for this source.</div></div>'; return; }
+  con.innerHTML = news.map(n=>`
+    <div class="news-card">
+      <div class="news-src">📡 ${n.src}</div>
+      <div class="news-title"><a href="${n.link}" target="_blank" rel="noopener">${n.title}</a></div>
+      ${n.desc?`<div class="news-desc">${n.desc}</div>`:''}
+      <div class="news-meta">
+        <span>📅 ${n.date}</span>
+        <span><a href="${n.link}" target="_blank" style="color:var(--gold);text-decoration:none;font-size:11px">Read Full Article →</a></span>
+      </div>
+    </div>`).join('');
+}
+
+async function fetchRSS(source) {
+  try {
+    const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(source.rss)}`);
+    const data = await res.json();
+    if(data.status==='ok' && data.items?.length) {
+      return data.items.slice(0,8).map(item=>({
+        title: item.title,
+        link: item.link,
+        date: item.pubDate ? new Date(item.pubDate).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}) : '',
+        src: source.label,
+        desc: item.description ? item.description.replace(/<[^>]+>/g,'').slice(0,180)+'...' : '',
+        _src: source.id
+      }));
+    }
+  } catch(e) {}
+  return [];
+}
+
+async function init() {
+  renderTabs();
+  // Try RSS feeds
+  const fetches = SOURCES.filter(s=>s.rss).map(s=>fetchRSS(s));
+  const results = await Promise.all(fetches);
+  const live = results.flat();
+  
+  if(live.length >= 4) {
+    allNews = live;
+  } else {
+    // Use static fallback
+    allNews = STATIC.map(n=>({...n, _src:'all'}));
+  }
+  renderNews();
+}
+
+init();
+</script>
+</body>
+</html>

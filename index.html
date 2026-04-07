@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EASSY Taxation – Expert CA, Tax & Legal Services in Pune</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1B3A;--navy-mid:#112247;--gold:#C9A84C;--gold-light:#E4C97A;--white:#fff;--muted:#8a9bb5;--border:rgba(201,168,76,.2);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--navy);}::-webkit-scrollbar-thumb{background:var(--gold);}
+.cxl{max-width:1280px;margin:0 auto;padding:0 40px;}
+/* TOP BAR */
+.topbar{background:var(--navy-mid);border-bottom:1px solid var(--border);padding:9px 0;font-size:13px;}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;}
+.topbar-contact{display:flex;gap:20px;flex-wrap:wrap;color:var(--muted);}
+.topbar-contact a{color:var(--gold-light);text-decoration:none;}
+/* NAV */
+nav{background:var(--navy);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:42px;height:42px;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:21px;color:var(--navy);}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:var(--white);}
+.logo-tag{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+.nav-links a{display:block;padding:8px 13px;color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;border-radius:6px;transition:all .2s;}
+.nav-links a:hover,.nav-links a.act{color:var(--gold);background:rgba(201,168,76,.08);}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;font-weight:700!important;border-radius:8px!important;}
+.nav-cta:hover{background:var(--gold-light)!important;}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;}
+.hbg span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:all .3s;}
+/* TICKER */
+.ticker{background:rgba(201,168,76,.06);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:10px 0;overflow:hidden;white-space:nowrap;}
+.ticker-track{display:inline-flex;gap:60px;animation:tick 28s linear infinite;}
+.ticker-track:hover{animation-play-state:paused;}
+.ticker-item{font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:8px;}
+.ticker-item strong{color:var(--gold);}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+/* HERO */
+.hero{min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:80px 0;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 65% 50%,rgba(201,168,76,.05) 0%,transparent 70%);}
+.hero-grid{position:absolute;inset:0;opacity:.03;background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);background-size:64px 64px;}
+.hero-circle{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:640px;height:640px;border-radius:50%;border:1px solid rgba(201,168,76,.07);}
+.hero-circle::before{content:'';position:absolute;inset:60px;border-radius:50%;border:1px solid rgba(201,168,76,.1);}
+.hero-circle::after{content:'';position:absolute;inset:130px;border-radius:50%;border:1px solid rgba(201,168,76,.14);}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;position:relative;z-index:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.1);border:1px solid var(--border);padding:7px 16px;border-radius:50px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.hero-badge span{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,66px);font-weight:700;line-height:1.08;margin-bottom:22px;}
+h1 em{color:var(--gold);font-style:italic;}
+.hero-desc{font-size:15px;line-height:1.8;color:var(--muted);max-width:490px;margin-bottom:36px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-g{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none;font-size:14px;transition:all .25s;}
+.btn-g:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 28px rgba(201,168,76,.3);}
+.btn-o{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);color:var(--white);padding:13px 28px;border-radius:8px;text-decoration:none;font-size:14px;transition:all .25s;}
+.btn-o:hover{border-color:var(--gold);color:var(--gold);}
+.hero-stats{display:flex;gap:36px;margin-top:44px;padding-top:30px;border-top:1px solid var(--border);flex-wrap:wrap;}
+.h-stat-n{font-family:'Bebas Neue';font-size:38px;color:var(--gold);line-height:1;}
+.h-stat-l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
+/* HERO CARD */
+.hero-visual{position:relative;display:flex;justify-content:center;}
+.hcard{background:var(--navy-mid);border:1px solid var(--border);border-radius:18px;padding:28px;width:320px;box-shadow:0 40px 80px rgba(0,0,0,.5);animation:float 4s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hcard-title{font-size:12px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px;}
+.svc-row{display:flex;align-items:center;gap:12px;padding:10px;border-radius:8px;transition:all .2s;}
+.svc-row:hover{background:rgba(201,168,76,.05);}
+.svc-ico{width:34px;height:34px;border-radius:8px;background:rgba(201,168,76,.12);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.svc-nm{font-size:13px;font-weight:500;}
+.svc-sub{font-size:11px;color:var(--muted);}
+.hcard-badge{position:absolute;top:-18px;right:-18px;background:var(--gold);color:var(--navy);border-radius:14px;padding:12px 16px;font-size:11px;font-weight:700;text-align:center;line-height:1.3;box-shadow:0 8px 24px rgba(201,168,76,.4);}
+.hcard-badge span{font-family:'Bebas Neue';font-size:26px;display:block;}
+/* SECTION COMMONS */
+.sec{padding:90px 0;}
+.sec-alt{background:var(--navy-mid);}
+.sl{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.st{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,48px);font-weight:700;line-height:1.1;}
+.st em{color:var(--gold);font-style:italic;}
+.sd{color:var(--muted);font-size:15px;line-height:1.8;margin-top:12px;}
+.div{width:50px;height:2px;background:var(--gold);margin:14px 0;}
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.svc-card{background:var(--navy-mid);border:1px solid var(--border);border-radius:14px;padding:28px;transition:all .3s;position:relative;overflow:hidden;}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:.3s;}
+.svc-card:hover{border-color:rgba(201,168,76,.45);transform:translateY(-4px);box-shadow:0 18px 44px rgba(0,0,0,.4);}
+.svc-card:hover::after{opacity:1;}
+.svc-icon{width:52px;height:52px;border-radius:12px;background:rgba(201,168,76,.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:20px;}
+.svc-card h3{font-size:17px;font-weight:600;margin-bottom:10px;}
+.svc-card p{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.svc-list li{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:7px;}
+.svc-list li::before{content:'›';color:var(--gold);font-size:14px;}
+.svc-cta{display:inline-flex;align-items:center;gap:6px;margin-top:18px;color:var(--gold);font-size:13px;font-weight:600;text-decoration:none;transition:gap .2s;}
+.svc-cta:hover{gap:10px;}
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.team-card{background:var(--navy);border:1px solid var(--border);border-radius:16px;padding:30px;text-align:center;transition:all .3s;}
+.team-card:hover{border-color:rgba(201,168,76,.45);transform:translateY(-4px);}
+.team-avatar{width:80px;height:80px;border-radius:50%;background:rgba(201,168,76,.15);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-size:32px;color:var(--gold);font-weight:700;margin:0 auto 16px;}
+.team-name{font-size:18px;font-weight:700;font-family:'Cormorant Garamond',serif;margin-bottom:4px;}
+.team-qual{font-size:12px;color:var(--gold);margin-bottom:8px;letter-spacing:.5px;}
+.team-spec{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;}
+.team-contact{display:flex;flex-direction:column;gap:6px;}
+.team-contact a{font-size:12px;color:var(--muted);text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px;transition:color .2s;}
+.team-contact a:hover{color:var(--gold);}
+/* TAX UPDATES PREVIEW */
+.update-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.update-card{background:var(--navy);border:1px solid var(--border);border-radius:12px;padding:22px;transition:all .25s;}
+.update-card:hover{border-color:rgba(201,168,76,.4);transform:translateY(-2px);}
+.update-source{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
+.update-title{font-size:14px;font-weight:500;line-height:1.5;margin-bottom:8px;}
+.update-title a{color:var(--white);text-decoration:none;}
+.update-title a:hover{color:var(--gold);}
+.update-date{font-size:11px;color:var(--muted);}
+/* STATS */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.stat-box{background:var(--navy);border:1px solid var(--border);border-radius:14px;padding:28px;text-align:center;}
+.stat-big{font-family:'Bebas Neue';font-size:52px;color:var(--gold);line-height:1;}
+.stat-lbl{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:6px;}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:70px;}
+.ci-list{display:flex;flex-direction:column;gap:18px;}
+.ci{display:flex;gap:16px;align-items:flex-start;padding:20px;background:var(--navy-mid);border:1px solid var(--border);border-radius:12px;}
+.ci-ico{width:42px;height:42px;border-radius:10px;background:rgba(201,168,76,.1);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.ci-lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
+.ci-val{font-size:14px;color:var(--white);font-weight:500;}
+.cf{background:var(--navy-mid);border:1px solid var(--border);border-radius:18px;padding:36px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.fg{margin-bottom:16px;}
+.f-label{display:block;font-size:11px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:1px;}
+.f-input,.f-select,.f-ta{width:100%;padding:11px 14px;background:var(--navy);border:1px solid var(--border);border-radius:8px;color:var(--white);font-size:14px;outline:none;font-family:'DM Sans',sans-serif;transition:border-color .2s;}
+.f-input:focus,.f-select:focus,.f-ta:focus{border-color:var(--gold);}
+.f-ta{height:110px;resize:vertical;}
+.f-select option{background:var(--navy-mid);}
+.f-btn{width:100%;padding:14px;background:var(--gold);color:var(--navy);border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;transition:all .25s;font-family:'DM Sans',sans-serif;}
+.f-btn:hover{background:var(--gold-light);transform:translateY(-2px);}
+/* FOOTER */
+footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:60px 0 30px;}
+.fg-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:48px;}
+.fb p{font-size:13px;color:var(--muted);line-height:1.8;margin:14px 0 20px;}
+.f-soc{display:flex;gap:10px;}
+.f-soc a{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;font-size:13px;transition:all .2s;}
+.f-soc a:hover{border-color:var(--gold);color:var(--gold);}
+.fc h4{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.fl{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.fl a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .2s;}
+.fl a:hover{color:var(--gold);}
+.f-bot{border-top:1px solid var(--border);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.f-bot p{font-size:12px;color:var(--muted);}
+.f-bot span{color:var(--gold);}
+/* FAB */
+.fab{position:fixed;bottom:26px;right:26px;z-index:999;background:var(--gold);color:var(--navy);width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 8px 24px rgba(201,168,76,.4);transition:all .2s;}
+.fab:hover{transform:scale(1.1);}
+/* FI */
+.fi{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+.fi.v{opacity:1;transform:none;}
+/* RESPONSIVE */
+@media(max-width:1024px){.hero-inner,.contact-grid{grid-template-columns:1fr;gap:40px;}.hero-visual{display:none;}.svc-grid,.team-grid{grid-template-columns:repeat(2,1fr);}.stats-row{grid-template-columns:repeat(2,1fr);}.update-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){.cxl{padding:0 20px;}.sec{padding:60px 0;}.nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--navy-mid);border-bottom:1px solid var(--border);padding:12px 20px;gap:2px;}.nav-links.open{display:flex;}.hbg{display:flex;}nav{position:relative;}.svc-grid,.team-grid,.update-grid,.stats-row{grid-template-columns:1fr;}.fg-grid{grid-template-columns:1fr 1fr;}.form-row{grid-template-columns:1fr;}.topbar-contact{display:none;}}
+@media(max-width:500px){.fg-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="cxl topbar-inner">
+    <div class="topbar-contact">
+      <span>📞 <a href="tel:+917972136151">+91 7972136151</a></span>
+      <span>✉️ <a href="mailto:eassytaxation@gmail.com">eassytaxation@gmail.com</a></span>
+      <span>📍 Jai Ganesh Vision, Akurdi, Pune</span>
+    </div>
+    <a href="#contact" style="color:var(--gold);font-size:13px;">📅 Free Consultation →</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="cxl nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">ET</div>
+      <div class="logo-text">
+        <div class="logo-name">EASSY Taxation</div>
+        <div class="logo-tag">Expert · Efficient · Ethical</div>
+      </div>
+    </a>
+    <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html" class="act">Home</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="tax-updates.html">Tax Updates</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="#contact" class="nav-cta">Get Started</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div><div class="hero-grid"></div><div class="hero-circle"></div>
+  <div class="cxl hero-inner">
+    <div>
+      <div class="hero-badge"><span></span>Trusted by 1000+ Clients Across India</div>
+      <h1>Simplifying <em>Taxation</em><br>& Legal Compliance<br>for Your Business</h1>
+      <p class="hero-desc">Expert CA, LLB-led services for ITR, GST, TDS, Payroll Compliance, RERA, Bank Finance, Legal Matters, and Pan-India Manpower — all under one roof in Pune.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-g">📅 Free Consultation →</a>
+        <a href="#services" class="btn-o">Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="h-stat-n">1000+</div><div class="h-stat-l">Happy Clients</div></div>
+        <div><div class="h-stat-n">10+</div><div class="h-stat-l">Years Experience</div></div>
+        <div><div class="h-stat-n">3</div><div class="h-stat-l">Expert Professionals</div></div>
+        <div><div class="h-stat-n">100%</div><div class="h-stat-l">On-Time Filing</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hcard">
+        <div class="hcard-title">⚡ Our Core Services</div>
+        <div class="svc-row"><div class="svc-ico">📊</div><div><div class="svc-nm">ITR Filing</div><div class="svc-sub">Individual & Business</div></div></div>
+        <div class="svc-row"><div class="svc-ico">🏢</div><div><div class="svc-nm">GST Services</div><div class="svc-sub">Registration & Returns</div></div></div>
+        <div class="svc-row"><div class="svc-ico">⚖️</div><div><div class="svc-nm">Legal Matters</div><div class="svc-sub">Civil, Property, Family</div></div></div>
+        <div class="svc-row"><div class="svc-ico">🏦</div><div><div class="svc-nm">Bank Loan & RERA</div><div class="svc-sub">Project Financing</div></div></div>
+        <div class="svc-row"><div class="svc-ico">👥</div><div><div class="svc-nm">Manpower (Pan India)</div><div class="svc-sub">Accounts & Finance</div></div></div>
+      </div>
+      <div class="hcard-badge"><span>₹0</span>Consultation<br>Fee</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec sec-alt" id="services">
+  <div class="cxl">
+    <div class="fi" style="margin-bottom:52px">
+      <div class="sl">What We Offer</div>
+      <div class="st">Comprehensive <em>Financial</em>, Tax<br>& Legal Services</div>
+      <div class="div"></div>
+      <div class="sd" style="max-width:560px">From daily tax filings to complex legal matters — our expert team of CAs and LLBs handles it all, so you focus on growing your business.</div>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card fi">
+        <div class="svc-icon">📊</div>
+        <h3>Income Tax (ITR) Filing</h3>
+        <p>Accurate and timely ITR filing for individuals, salaried, firms, LLPs, and companies with maximum tax savings advisory.</p>
+        <ul class="svc-list"><li>Individual & Salaried ITR</li><li>Business & Professional Returns</li><li>Tax Planning & Optimization</li><li>Scrutiny & Assessment Handling</li></ul>
+        <a href="#contact" class="svc-cta">Enquire Now →</a>
+      </div>
+      <div class="svc-card fi">
+        <div class="svc-icon">🏢</div>
+        <h3>GST Registration & Returns</h3>
+        <p>End-to-end GST compliance — registration, monthly/quarterly returns, reconciliation, and audit support.</p>
+        <ul class="svc-list"><li>New GST Registration</li><li>GSTR-1, 3B, 9 Filing</li><li>ITC Reconciliation (2A/2B)</li><li>GST Audit & Annual Return</li></ul>
+        <a href="#contact" class="svc-cta">Enquire Now →</a>
+      </div>
+      <div class="svc-card fi">
+        <div class="svc-icon">💼</div>
+        <h3>TDS Returns & Compliance</h3>
+        <p>Hassle-free TDS deduction calculation, deposit, and quarterly return filing with 26AS reconciliation.</p>
+        <ul class="svc-list"><li>Form 24Q, 26Q, 27Q Filing</li><li>TDS Deduction Advisory</li><li>Form 16 / 16A Generation</li><li>Lower Deduction Certificates</li></ul>
+        <a href="#contact" class="svc-cta">Enquire Now →</a>
+      </div>
+      <div class="svc-card fi">
+        <div class="svc-icon">👷</div>
+        <h3>PT / PF / ESIC Compliance</h3>
+        <p>Complete payroll statutory compliance — Professional Tax, Provident Fund, and ESI registration and return filing.</p>
+        <ul class="svc-list"><li>PT Registration & Monthly Returns</li><li>EPF / ESIC Registration & Challan</li><li>Monthly ECR Filing</li><li>Other Labour Law Compliances</li></ul>
+        <a href="#contact" class="svc-cta">Enquire Now →</a>
+      </div>
+      <div class="svc-card fi">
+        <div class="svc-icon">🏦</div>
+        <h3>Bank Loan & Project Finance</h3>
+        <p>Expert financial documentation and advisory to help you secure working capital, term loans, and project funding.</p>
+        <ul class="svc-list"><li>Project Report Preparation</li><li>CMA Data & Financial Projections</li><li>MSME / CC / OD Loans</li><li>RERA Compliance & Advisory</li></ul>
+        <a href="#contact" class="svc-cta">Enquire Now →</a>
+      </div>
+      <div class="svc-card fi">
+        <div class="svc-icon">🔍</div>
+        <h3>Audit & Assurance</h3>
+        <p>Statutory, tax, internal, and GST audits conducted with professional rigor by our qualified CA team.</p>
+        <ul class="svc-list"><li>Statutory & Tax Audit</li><li>Internal & Concurrent Audit</li><li>GST Audit & Certification</li><li>Stock & Branch Audit</li></ul>
+        <a href="#contact" class="svc-cta">Enquire Now →</a>
+      </div>
+      <div class="svc-card fi">
+        <div class="svc-icon">⚖️</div>
+        <h3>Legal Services</h3>
+        <p>Comprehensive legal advisory covering property, civil, criminal, and family matters handled by our expert LLB advocates.</p>
+        <ul class="svc-list"><li>Property & Civil Cases</li><li>Criminal & Family Matters</li><li>Contract Drafting & Review</li><li>RERA Legal Compliance</li></ul>
+        <a href="#contact" class="svc-cta">Enquire Now →</a>
+      </div>
+      <div class="svc-card fi">
+        <div class="svc-icon">👥</div>
+        <h3>Manpower Services (Pan India)</h3>
+        <p>Skilled accounts, finance, and compliance staff placement across all industries, pan India, on contract or permanent basis.</p>
+        <ul class="svc-list"><li>Accounts & Finance Staffing</li><li>Payroll & Compliance Staff</li><li>Contract & Permanent Placement</li><li>HR Outsourcing Solutions</li></ul>
+        <a href="#contact" class="svc-cta">Enquire Now →</a>
+      </div>
+      <div class="svc-card fi">
+        <div class="svc-icon">🏗️</div>
+        <h3>Business Registration & ROC</h3>
+        <p>Company incorporation, LLP registration, and all ROC/MCA compliance filings handled smoothly and on time.</p>
+        <ul class="svc-list"><li>Pvt Ltd & LLP Registration</li><li>Annual ROC Filings</li><li>Company Law Advisory</li><li>MSME & Udyam Registration</li></ul>
+        <a href="#contact" class="svc-cta">Enquire Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="sec" id="team">
+  <div class="cxl">
+    <div class="fi" style="text-align:center;margin-bottom:52px">
+      <div class="sl">Meet Our Experts</div>
+      <div class="st">The <em>Team</em> Behind<br>EASSY Taxation</div>
+      <div class="div" style="margin:16px auto"></div>
+      <div class="sd" style="max-width:500px;margin:0 auto">Qualified Chartered Accountants, Advocates, and Finance experts with combined experience of 20+ years.</div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fi">
+        <div class="team-avatar">LM</div>
+        <div class="team-name">Lalit Mahajan</div>
+        <div class="team-qual">CA Finalist | LLB | B.Com</div>
+        <div class="team-spec">Specialisation in <strong style="color:var(--gold)">Audit, GST, Income Tax</strong> and Legal Matters. Handles complex tax assessments, GST litigations, and statutory audits.</div>
+        <div class="team-contact">
+          <a href="tel:+917972136151">📞 +91 7972136151</a>
+          <a href="mailto:mahajanlallit@gmail.com">✉️ mahajanlallit@gmail.com</a>
+        </div>
+      </div>
+      <div class="team-card fi">
+        <div class="team-avatar">YM</div>
+        <div class="team-name">Yogesh Mandlik</div>
+        <div class="team-qual">LLB | GDCA | B.Com</div>
+        <div class="team-spec">Expert in <strong style="color:var(--gold)">Income Tax, RERA, Project Loans</strong> and Legal Matters. Handles property project compliance, RERA advisory, and tax planning.</div>
+        <div class="team-contact">
+          <a href="tel:+919923395507">📞 +91 9923395507</a>
+          <a href="mailto:yp91894@gmail.com">✉️ yp91894@gmail.com</a>
+        </div>
+      </div>
+      <div class="team-card fi">
+        <div class="team-avatar">UM</div>
+        <div class="team-name">Umesh Mahajan</div>
+        <div class="team-qual">B.Com | LLB</div>
+        <div class="team-spec">Specialised in <strong style="color:var(--gold)">Legal Matters, Property Cases, Civil, Criminal & Family</strong> matters. Provides end-to-end legal representation and advisory.</div>
+        <div class="team-contact">
+          <a href="mailto:eassytaxation@gmail.com">✉️ eassytaxation@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="sec sec-alt">
+  <div class="cxl">
+    <div class="stats-row">
+      <div class="stat-box fi"><div class="stat-big">1000+</div><div class="stat-lbl">Clients Served</div></div>
+      <div class="stat-box fi"><div class="stat-big">10K+</div><div class="stat-lbl">Returns Filed</div></div>
+      <div class="stat-box fi"><div class="stat-big">10+</div><div class="stat-lbl">Years of Excellence</div></div>
+      <div class="stat-box fi"><div class="stat-big">100%</div><div class="stat-lbl">On-Time Compliance</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TAX UPDATES PREVIEW -->
+<section class="sec" id="updates">
+  <div class="cxl">
+    <div class="fi" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+      <div>
+        <div class="sl">Live Updates</div>
+        <div class="st">Latest <em>Taxation</em> News</div>
+        <div class="div"></div>
+      </div>
+      <a href="tax-updates.html" class="btn-g">View All Updates →</a>
+    </div>
+    <div class="update-grid" id="home-updates">
+      <div class="update-card"><div class="update-source">Loading...</div><div class="update-title">Fetching latest tax updates...</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE TOOLS PREVIEW -->
+<section class="sec sec-alt">
+  <div class="cxl">
+    <div class="fi" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+      <div>
+        <div class="sl">Free Downloads</div>
+        <div class="st">Tools & <em>Automation</em></div>
+        <div class="div"></div>
+        <div class="sd">Download our free compliance tools, Excel calculators, and automation utilities.</div>
+      </div>
+      <a href="tools.html" class="btn-g">View All Tools →</a>
+    </div>
+    <div class="svc-grid" id="home-tools" style="grid-template-columns:repeat(3,1fr)"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="cxl">
+    <div class="fi" style="margin-bottom:52px">
+      <div class="sl">Get In Touch</div>
+      <div class="st">Let's Simplify Your <em>Compliance</em></div>
+      <div class="div"></div>
+      <div class="sd">Fill in the form and our team will reach out within 24 hours. First consultation is absolutely free.</div>
+    </div>
+    <div class="contact-grid">
+      <div class="ci-list fi">
+        <div class="ci"><div class="ci-ico">📞</div><div><div class="ci-lbl">Phone</div><div class="ci-val">+91 7972136151</div><div class="ci-val" style="margin-top:4px"><a href="tel:+919923395507" style="color:var(--muted);text-decoration:none">+91 9923395507 (Yogesh)</a></div></div></div>
+        <div class="ci"><div class="ci-ico">✉️</div><div><div class="ci-lbl">Email</div><div class="ci-val"><a href="mailto:eassytaxation@gmail.com" style="color:var(--white);text-decoration:none">eassytaxation@gmail.com</a></div><div class="ci-val" style="font-size:13px;margin-top:2px"><a href="mailto:mahajanlallit@gmail.com" style="color:var(--muted);text-decoration:none">mahajanlallit@gmail.com</a></div></div></div>
+        <div class="ci"><div class="ci-ico">📍</div><div><div class="ci-lbl">Office Address</div><div class="ci-val">Jai Ganesh Vision, Akurdi,<br>Pune – 411035, Maharashtra</div></div></div>
+        <div class="ci"><div class="ci-ico">🕐</div><div><div class="ci-lbl">Office Hours</div><div class="ci-val">Mon – Sat: 10:00 AM to 7:00 PM</div></div></div>
+        <div class="ci"><div class="ci-ico">💬</div><div><div class="ci-lbl">WhatsApp</div><div class="ci-val"><a href="https://wa.me/917972136151" style="color:var(--gold);text-decoration:none">Chat on WhatsApp →</a></div></div></div>
+      </div>
+      <div class="cf fi">
+        <div style="font-size:17px;font-weight:600;margin-bottom:6px">Send Us a Message</div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:24px">We respond within 24 hours on business days.</div>
+        <div class="form-row">
+          <div class="fg"><label class="f-label">Full Name *</label><input class="f-input" id="cf-name" type="text" placeholder="Your full name"></div>
+          <div class="fg"><label class="f-label">Phone *</label><input class="f-input" id="cf-phone" type="tel" placeholder="+91 XXXXX XXXXX"></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label class="f-label">Email</label><input class="f-input" id="cf-email" type="email" placeholder="your@email.com"></div>
+          <div class="fg"><label class="f-label">City</label><input class="f-input" id="cf-city" type="text" placeholder="Your city"></div>
+        </div>
+        <div class="fg"><label class="f-label">Service Required</label>
+          <select class="f-select" id="cf-service">
+            <option value="">Select a service...</option>
+            <option>ITR Filing</option><option>GST Registration</option><option>GST Returns</option>
+            <option>TDS Returns</option><option>PT / PF / ESIC</option><option>Bank Loan / Finance</option>
+            <option>Audit Services</option><option>Legal Services</option><option>RERA Advisory</option>
+            <option>Manpower Services</option><option>Business Registration</option><option>Other / General Query</option>
+          </select>
+        </div>
+        <div class="fg"><label class="f-label">Your Message</label><textarea class="f-ta" id="cf-msg" placeholder="Briefly describe your requirement..."></textarea></div>
+        <button class="f-btn" onclick="submitContact()">Send Message →</button>
+        <div id="cf-success" style="display:none;margin-top:14px;padding:12px;background:rgba(100,200,100,.1);border:1px solid rgba(100,200,100,.3);border-radius:8px;font-size:13px;color:#7ed87e;text-align:center">✅ Thank you! We'll contact you within 24 hours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="cxl fg-grid">
+    <div class="fb">
+      <a href="index.html" class="logo" style="text-decoration:none">
+        <div class="logo-icon">ET</div>
+        <div class="logo-text"><div class="logo-name">EASSY Taxation</div><div class="logo-tag">Expert · Efficient · Ethical</div></div>
+      </a>
+      <p>CA and LLB-led firm offering taxation, GST, audit, legal, and manpower services. Based in Akurdi, Pune — serving clients across Maharashtra and pan India since 2014.</p>
+      <div class="f-soc">
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="Facebook">f</a>
+        <a href="https://wa.me/917972136151" title="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="fc">
+      <h4>Services</h4>
+      <ul class="fl"><li><a href="#services">ITR Filing</a></li><li><a href="#services">GST Services</a></li><li><a href="#services">TDS Returns</a></li><li><a href="#services">PT/PF/ESIC</a></li><li><a href="#services">Audit</a></li><li><a href="#services">Legal Services</a></li><li><a href="#services">Bank Loan</a></li><li><a href="#services">Manpower</a></li></ul>
+    </div>
+    <div class="fc">
+      <h4>Quick Links</h4>
+      <ul class="fl"><li><a href="index.html">Home</a></li><li><a href="tools.html">Free Tools</a></li><li><a href="blog.html">Blog</a></li><li><a href="tax-updates.html">Tax Updates</a></li><li><a href="careers.html">Careers</a></li><li><a href="admin.html">Admin</a></li></ul>
+    </div>
+    <div class="fc">
+      <h4>Govt. Portals</h4>
+      <ul class="fl">
+        <li><a href="https://www.incometax.gov.in" target="_blank">Income Tax Dept.</a></li>
+        <li><a href="https://www.gst.gov.in" target="_blank">GST Portal</a></li>
+        <li><a href="https://www.mca.gov.in" target="_blank">MCA / ROC</a></li>
+        <li><a href="https://www.epfindia.gov.in" target="_blank">EPFO</a></li>
+        <li><a href="https://www.esic.in" target="_blank">ESIC</a></li>
+        <li><a href="https://maharera.mahaonline.gov.in" target="_blank">MahaRERA</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cxl f-bot">
+    <p>© 2025 <span>EASSY Taxation</span>. All Rights Reserved. Akurdi, Pune, Maharashtra.</p>
+    <p>📞 <a href="tel:+917972136151" style="color:var(--gold);text-decoration:none">+91 7972136151</a></p>
+  </div>
+</footer>
+<a href="https://wa.me/917972136151?text=Hello%2C+I+need+help+with+compliance." class="fab" title="WhatsApp">💬</a>
+
+<script>
+// ── LocalStorage helpers ──
+const ET = {
+  get: (k, d=[]) => { try { return JSON.parse(localStorage.getItem('et_'+k)) || d; } catch { return d; } },
+  set: (k, v) => localStorage.setItem('et_'+k, JSON.stringify(v)),
+  uid: () => Date.now().toString(36)+Math.random().toString(36).slice(2),
+  fmtDate: d => new Date(d).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})
+};
+
+// ── Seed default data ──
+function seedData() {
+  if (localStorage.getItem('et_seeded')) return;
+  ET.set('tools',[
+    {id:ET.uid(),name:'GST Reconciliation Tool',cat:'GST',desc:'Automatically reconcile GSTR-2A/2B with purchase register. Identifies ITC mismatches instantly.',usage:'1. Open Excel\n2. Paste GSTR-2A in Sheet 1\n3. Paste Purchase Register in Sheet 2\n4. Click Reconcile\n5. View mismatch report',link:'#',icon:'📊',dl:428,date:new Date().toISOString()},
+    {id:ET.uid(),name:'Income Tax Calculator FY 2025-26',cat:'Income Tax',desc:'Compare Old vs New regime. Includes all deductions: 80C, 80D, HRA, home loan interest.',usage:'1. Enter gross income\n2. Fill deductions\n3. Tool compares both regimes\n4. Shows which is better',link:'#',icon:'💰',dl:1204,date:new Date().toISOString()},
+    {id:ET.uid(),name:'TDS Rate Chart 2025-26',cat:'TDS',desc:'Complete TDS rate chart for all sections with threshold limits for resident & non-resident payments.',usage:'1. Open PDF\n2. Find payment type\n3. Check section and rate\n4. Apply to payment',link:'#',icon:'📋',dl:876,date:new Date().toISOString()},
+    {id:ET.uid(),name:'Payroll & PF/ESIC Calculator',cat:'Payroll',desc:'Calculate salary breakup, PF contribution, ESIC, Professional Tax, and net take-home pay.',usage:'1. Enter CTC or gross salary\n2. Enter allowances\n3. Tool auto-calculates PF/ESIC/PT\n4. Download salary slip',link:'#',icon:'👷',dl:312,date:new Date().toISOString()},
+  ]);
+  ET.set('blogs',[
+    {id:ET.uid(),title:'New Income Tax Regime vs Old Regime FY 2025-26: Which is Better?',cat:'Income Tax',author:'Lalit Mahajan',date:new Date().toISOString(),excerpt:'With Budget 2025 making the new regime default and no tax up to ₹12 lakh, here is a complete comparison with real examples.',content:'<h3>New vs Old Regime – The Key Differences</h3><p>The Union Budget 2025 revamped the new tax regime. Most importantly: <strong>No tax on income up to ₹12 lakh</strong> under the new regime due to rebate u/s 87A.</p><h3>New Regime Slabs (FY 2025-26)</h3><p>0–3L: Nil | 3–7L: 5% | 7–10L: 10% | 10–12L: 15% | 12–15L: 20% | Above 15L: 30%</p><h3>Who Should Choose Old Regime?</h3><p>If your total deductions exceed ₹3.75 lakh, old regime may still be better. Use our calculator to compare your specific situation.</p>',tags:'Income Tax,Budget 2025,Tax Planning',views:1240},
+    {id:ET.uid(),title:'GST Annual Return GSTR-9: Complete Filing Guide for FY 2024-25',cat:'GST',author:'Lalit Mahajan',date:new Date(Date.now()-86400000*3).toISOString(),excerpt:'GSTR-9 filing deadline is approaching. Step-by-step guide to filing GST annual return without errors.',content:'<h3>What is GSTR-9?</h3><p>GSTR-9 is the annual return filed by all registered taxpayers. It consolidates all monthly/quarterly returns filed during the year.</p><h3>Common Mistakes to Avoid</h3><p>1. Not reconciling GSTR-1 vs GSTR-3B<br>2. ITC claimed vs 2A/2B mismatch<br>3. Wrong HSN summary entries</p>',tags:'GST,Annual Return,Compliance',views:890},
+    {id:ET.uid(),title:'TDS on Rent u/s 194-IB: Rate, Applicability & How to File Form 26QC',cat:'TDS',author:'Yogesh Mandlik',date:new Date(Date.now()-86400000*7).toISOString(),excerpt:'Paying rent above ₹50,000/month? TDS is mandatory. Here is everything a tenant needs to know.',content:'<h3>Who Must Deduct TDS on Rent?</h3><p>Any individual or HUF paying rent exceeding ₹50,000/month to a resident landlord must deduct TDS u/s 194-IB.</p><h3>Rate & Filing</h3><p>Rate: 2% (Budget 2024 onward). Use Form 26QC to pay TDS. Provide Form 16C to landlord within 15 days.</p>',tags:'TDS,Rent,Compliance',views:654},
+  ]);
+  ET.set('jobs',[
+    {id:ET.uid(),title:'Tax Associate – Income Tax & GST',dept:'Taxation',loc:'Akurdi, Pune',type:'Full Time',exp:'1–3 Years',skills:'GST Filing, ITR, TDS',desc:'Handle GST returns, ITR filing, and TDS compliance for clients. Must have good knowledge of GST and Income Tax laws.',date:new Date().toISOString(),active:true},
+    {id:ET.uid(),title:'Accounts Executive',dept:'Accounts',loc:'Akurdi, Pune',type:'Full Time',exp:'0–2 Years',skills:'Tally, Excel, Bookkeeping',desc:'Day-to-day accounting, bank reconciliation, ledger maintenance using Tally Prime.',date:new Date().toISOString(),active:true},
+    {id:ET.uid(),title:'Manpower Coordinator (Pan India)',dept:'HR & Staffing',loc:'Remote/Pune',type:'Full Time',exp:'2–4 Years',skills:'Recruitment, HR Operations, Finance Hiring',desc:'End-to-end recruitment for accounts/finance profiles for our clients across India.',date:new Date().toISOString(),active:true},
+  ]);
+  ET.set('contacts',[]);
+  ET.set('apps',[]);
+  localStorage.setItem('et_seeded','1');
+}
+
+// ── Ticker ──
+const tickerItems = [
+  '<strong>📌 Due Date:</strong> GSTR-3B for March 2025 — 20th April 2025',
+  '<strong>📌 ITR Filing:</strong> Last date AY 2025-26 — 31st July 2025',
+  '<strong>📌 TDS:</strong> Q4 TDS Return due — 31st May 2025',
+  '<strong>📌 Budget 2025:</strong> No tax up to ₹12 Lakh under new regime',
+  '<strong>📌 GSTR-9:</strong> Annual Return deadline — 31st December 2025',
+  '<strong>📌 PF:</strong> Monthly ECR filing — 15th of every month',
+  '<strong>📌 ESIC:</strong> Monthly contribution — 15th of every month',
+];
+function buildTicker() {
+  const t = document.getElementById('ticker');
+  const html = [...tickerItems,...tickerItems].map(s => `<span class="ticker-item">${s} <span style="color:var(--gold);opacity:.4">◆</span></span>`).join('');
+  t.innerHTML = html;
+}
+
+// ── Home Tools Preview ──
+function renderHomeTools() {
+  const tools = ET.get('tools');
+  const wrap = document.getElementById('home-tools');
+  if (!wrap) return;
+  wrap.innerHTML = tools.slice(0,3).map(t => `
+    <div class="svc-card">
+      <div class="svc-icon">${t.icon||'🔧'}</div>
+      <h3>${t.name}</h3>
+      <p>${t.desc}</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:16px">
+        <span style="font-size:12px;color:var(--muted)">📥 ${t.dl||0} downloads</span>
+        <span style="font-size:11px;padding:3px 10px;border-radius:20px;background:rgba(201,168,76,.1);color:var(--gold)">${t.cat}</span>
+      </div>
+      <a href="tools.html" class="svc-cta">Download →</a>
+    </div>`).join('');
+}
+
+// ── Tax Updates (RSS via rss2json) ──
+async function fetchUpdates() {
+  const box = document.getElementById('home-updates');
+  const sources = [
+    { url: 'https://pib.gov.in/RSSFeed.aspx?ModID=6&pid=1', label: 'Finance Ministry' },
+    { url: 'https://www.business-standard.com/rss/finance-53.rss', label: 'Business Standard' },
+  ];
+  const staticNews = [
+    { title: 'No Income Tax up to ₹12 Lakh in New Regime – Budget 2025 Highlights', link: 'https://www.incometax.gov.in', date: 'Feb 2025', src: 'Income Tax Dept.' },
+    { title: 'GSTR-9 Annual Return Simplified – Key Changes for FY 2024-25', link: 'https://www.gst.gov.in', date: 'Jan 2025', src: 'GST Council' },
+    { title: 'TDS Rate on Rent Reduced to 2% from 5% – Budget 2024 Amendment', link: 'https://www.incometax.gov.in', date: 'Jul 2024', src: 'CBDT' },
+    { title: 'New Income Tax Bill 2025 Introduced in Parliament – What Changes?', link: 'https://www.incometax.gov.in', date: 'Feb 2025', src: 'Finance Ministry' },
+    { title: 'CBIC Issues Clarification on ITC Reversal under Rule 42 & 43', link: 'https://cbic-gst.gov.in', date: 'Mar 2025', src: 'CBIC' },
+    { title: 'EPF Interest Rate Retained at 8.25% for 2024-25 – EPFO Announcement', link: 'https://www.epfindia.gov.in', date: 'Mar 2025', src: 'EPFO' },
+  ];
+
+  // Try fetching from RSS2JSON
+  try {
+    const API = 'https://api.rss2json.com/v1/api.json?rss_url=';
+    const fetches = sources.map(s =>
+      fetch(API + encodeURIComponent(s.url))
+        .then(r => r.json())
+        .then(d => (d.items || []).slice(0, 3).map(i => ({ title: i.title, link: i.link, date: new Date(i.pubDate).toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }), src: s.label })))
+        .catch(() => [])
+    );
+    const results = (await Promise.all(fetches)).flat();
+    if (results.length >= 3) {
+      box.innerHTML = results.slice(0, 6).map(n => `
+        <div class="update-card">
+          <div class="update-source">${n.src}</div>
+          <div class="update-title"><a href="${n.link}" target="_blank">${n.title}</a></div>
+          <div class="update-date">📅 ${n.date}</div>
+        </div>`).join('');
+      return;
+    }
+  } catch(e) {}
+
+  // Fallback to static
+  box.innerHTML = staticNews.slice(0,6).map(n => `
+    <div class="update-card">
+      <div class="update-source">${n.src}</div>
+      <div class="update-title"><a href="${n.link}" target="_blank">${n.title}</a></div>
+      <div class="update-date">📅 ${n.date}</div>
+    </div>`).join('');
+}
+
+// ── Contact form ──
+function submitContact() {
+  const name = document.getElementById('cf-name').value.trim();
+  const phone = document.getElementById('cf-phone').value.trim();
+  if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+  const contacts = ET.get('contacts');
+  contacts.unshift({ id: ET.uid(), name, phone, email: document.getElementById('cf-email').value, city: document.getElementById('cf-city').value, service: document.getElementById('cf-service').value, msg: document.getElementById('cf-msg').value, date: new Date().toISOString(), read: false });
+  ET.set('contacts', contacts);
+  document.getElementById('cf-success').style.display = 'block';
+  setTimeout(() => document.getElementById('cf-success').style.display = 'none', 5000);
+  ['cf-name','cf-phone','cf-email','cf-city','cf-msg'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('cf-service').selectedIndex = 0;
+}
+
+// ── Fade-in ──
+const obs = new IntersectionObserver(e => e.forEach(el => { if(el.isIntersecting) el.target.classList.add('v'); }), {threshold:.08});
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+
+// ── Init ──
+seedData();
+buildTicker();
+renderHomeTools();
+fetchUpdates();
+</script>
+</body>
+</html>

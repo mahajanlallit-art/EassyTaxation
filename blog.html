@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Blog – EASSY Taxation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1B3A;--navy-mid:#112247;--gold:#C9A84C;--gold-light:#E4C97A;--white:#fff;--muted:#8a9bb5;--border:rgba(201,168,76,.2);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-thumb{background:var(--gold);}
+.cxl{max-width:1280px;margin:0 auto;padding:0 40px;}
+.topbar{background:var(--navy-mid);border-bottom:1px solid var(--border);padding:9px 0;font-size:13px;}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;}
+.topbar-contact{display:flex;gap:20px;flex-wrap:wrap;color:var(--muted);}
+.topbar-contact a{color:var(--gold-light);text-decoration:none;}
+nav{background:var(--navy);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:1000;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:42px;height:42px;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:21px;color:var(--navy);}
+.logo-name{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:var(--white);}
+.logo-tag{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none;}
+.nav-links a{display:block;padding:8px 13px;color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;border-radius:6px;transition:all .2s;}
+.nav-links a:hover,.nav-links a.act{color:var(--gold);background:rgba(201,168,76,.08);}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;font-weight:700!important;border-radius:8px!important;}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;}
+.hbg span{width:24px;height:2px;background:var(--white);border-radius:2px;}
+.page-hero{background:var(--navy-mid);border-bottom:1px solid var(--border);padding:60px 0;}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,50px);font-weight:700;}
+.page-hero h1 em{color:var(--gold);font-style:italic;}
+/* BLOG LAYOUT */
+.blog-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;padding:60px 0;}
+/* BLOG CARDS */
+.blog-card{background:var(--navy-mid);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:24px;transition:all .3s;cursor:pointer;}
+.blog-card:hover{border-color:rgba(201,168,76,.5);transform:translateY(-2px);}
+.blog-card-body{padding:28px;}
+.blog-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
+.blog-cat{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;background:rgba(201,168,76,.1);color:var(--gold);border:1px solid var(--border);}
+.blog-date{font-size:12px;color:var(--muted);}
+.blog-author{font-size:12px;color:var(--muted);}
+.blog-title{font-size:18px;font-weight:700;font-family:'Cormorant Garamond',serif;line-height:1.3;margin-bottom:10px;color:var(--white);}
+.blog-excerpt{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.blog-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+.blog-tag{font-size:11px;padding:2px 8px;border-radius:4px;background:rgba(255,255,255,.05);color:var(--muted);}
+.blog-read{color:var(--gold);font-size:13px;font-weight:600;}
+.blog-views{font-size:11px;color:var(--muted);}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;display:none;overflow-y:auto;padding:40px 20px;}
+.modal-overlay.open{display:block;}
+.modal{max-width:800px;margin:0 auto;background:var(--navy-mid);border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+.modal-head{padding:36px 36px 0;}
+.modal-close{float:right;background:none;border:none;color:var(--muted);font-size:24px;cursor:pointer;margin-top:-8px;}
+.modal-close:hover{color:var(--gold);}
+.modal-meta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px;}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:700;line-height:1.2;margin-bottom:20px;}
+.modal-body{padding:0 36px 36px;margin-top:20px;}
+.modal-content{font-size:15px;line-height:1.85;color:#c5cfde;}
+.modal-content h3{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);margin:24px 0 10px;}
+.modal-content p{margin-bottom:14px;}
+.modal-content strong{color:var(--white);}
+/* SIDEBAR */
+.sidebar-box{background:var(--navy-mid);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:24px;}
+.sidebar-box h4{font-size:13px;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;}
+.filter-btn{display:block;width:100%;padding:8px 12px;border-radius:7px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;text-align:left;transition:all .2s;margin-bottom:4px;}
+.filter-btn.active,.filter-btn:hover{background:rgba(201,168,76,.08);border-color:var(--border);color:var(--gold);}
+.search-input{width:100%;padding:10px 14px;background:var(--navy);border:1px solid var(--border);border-radius:8px;color:var(--white);font-size:13px;outline:none;font-family:'DM Sans',sans-serif;}
+.search-input:focus{border-color:var(--gold);}
+.recent-item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05);cursor:pointer;}
+.recent-item:last-child{border-bottom:none;}
+.recent-item:hover .ri-title{color:var(--gold);}
+.ri-ico{width:36px;height:36px;border-radius:8px;background:rgba(201,168,76,.1);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.ri-title{font-size:12px;color:var(--white);line-height:1.4;transition:color .2s;}
+.ri-date{font-size:10px;color:var(--muted);margin-top:2px;}
+/* FOOTER */
+footer{background:var(--navy-mid);border-top:1px solid var(--border);padding:30px 0;}
+.f-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.f-bot p{font-size:12px;color:var(--muted);}
+.fab{position:fixed;bottom:26px;right:26px;z-index:999;background:var(--gold);color:var(--navy);width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none;box-shadow:0 8px 24px rgba(201,168,76,.4);}
+@media(max-width:900px){.blog-layout{grid-template-columns:1fr;}}
+@media(max-width:768px){.cxl{padding:0 20px;}.nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--navy-mid);border-bottom:1px solid var(--border);padding:12px 20px;gap:2px;}.nav-links.open{display:flex;}.hbg{display:flex;}nav{position:relative;}.topbar-contact{display:none;}.modal-head,.modal-body{padding:24px;}.modal-overlay{padding:16px;}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="cxl topbar-inner">
+    <div class="topbar-contact"><span>📞 <a href="tel:+917972136151">+91 7972136151</a></span><span>✉️ <a href="mailto:eassytaxation@gmail.com">eassytaxation@gmail.com</a></span></div>
+    <a href="index.html#contact" style="color:var(--gold);font-size:13px;">📅 Free Consultation →</a>
+  </div>
+</div>
+<nav>
+  <div class="cxl nav-inner">
+    <a href="index.html" class="logo"><div class="logo-icon">ET</div><div><div class="logo-name">EASSY Taxation</div><div class="logo-tag">Expert · Efficient · Ethical</div></div></a>
+    <button class="hbg" onclick="document.getElementById('nl').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl"><li><a href="index.html">Home</a></li><li><a href="tools.html">Tools</a></li><li><a href="blog.html" class="act">Blog</a></li><li><a href="tax-updates.html">Tax Updates</a></li><li><a href="careers.html">Careers</a></li><li><a href="index.html#contact" class="nav-cta">Get Started</a></li></ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="cxl">
+    <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px">Knowledge Hub</div>
+    <h1>Taxation <em>Blog</em> & Insights</h1>
+    <p style="color:var(--muted);font-size:15px;margin-top:10px">Expert articles, guides, and updates on Income Tax, GST, TDS, and compliance — written by our CA and LLB team.</p>
+  </div>
+</div>
+
+<div class="cxl blog-layout">
+  <!-- POSTS -->
+  <div>
+    <div id="blog-list"></div>
+  </div>
+  <!-- SIDEBAR -->
+  <div>
+    <div class="sidebar-box">
+      <h4>🔍 Search</h4>
+      <input class="search-input" id="search" type="text" placeholder="Search articles..." oninput="renderBlogs()">
+    </div>
+    <div class="sidebar-box">
+      <h4>📂 Categories</h4>
+      <div id="cat-filters"></div>
+    </div>
+    <div class="sidebar-box">
+      <h4>🕐 Recent Posts</h4>
+      <div id="recent-posts"></div>
+    </div>
+    <div class="sidebar-box" style="background:rgba(201,168,76,.06);border-color:var(--gold)">
+      <h4 style="color:var(--white)">💬 Need Help?</h4>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:14px">Have tax questions? Our experts are available for a free consultation.</p>
+      <a href="index.html#contact" style="display:block;background:var(--gold);color:var(--navy);padding:10px;text-align:center;border-radius:8px;font-weight:700;text-decoration:none;font-size:13px">Book Free Consultation →</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-head">
+      <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">✕</button>
+      <div class="modal-meta" id="m-meta"></div>
+      <div class="modal-title" id="m-title"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-content" id="m-content"></div>
+      <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border);text-align:center">
+        <p style="color:var(--muted);font-size:14px;margin-bottom:14px">Questions? Contact our expert team.</p>
+        <a href="index.html#contact" style="background:var(--gold);color:var(--navy);padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px">📞 Get Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="cxl f-bot">
+    <p>© 2025 <span style="color:var(--gold)">EASSY Taxation</span>. All Rights Reserved. Akurdi, Pune.</p>
+    <div style="display:flex;gap:16px"><a href="index.html" style="color:var(--muted);text-decoration:none;font-size:13px">Home</a><a href="tools.html" style="color:var(--muted);text-decoration:none;font-size:13px">Tools</a><a href="index.html#contact" style="color:var(--gold);text-decoration:none;font-size:13px">Contact</a></div>
+  </div>
+</footer>
+<a href="https://wa.me/917972136151" class="fab">💬</a>
+
+<script>
+const ET = { get:(k,d=[])=>{try{return JSON.parse(localStorage.getItem('et_'+k))||d;}catch{return d;}}, set:(k,v)=>localStorage.setItem('et_'+k,JSON.stringify(v)) };
+const fmtDate = d => new Date(d).toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+let activeFilter = 'All';
+
+function renderCats() {
+  const blogs = ET.get('blogs');
+  const cats = ['All', ...new Set(blogs.map(b=>b.cat))];
+  document.getElementById('cat-filters').innerHTML = cats.map(c=>`<button class="filter-btn${c===activeFilter?' active':''}" onclick="setFilter('${c}')">${c}</button>`).join('');
+}
+
+function setFilter(cat) { activeFilter=cat; renderCats(); renderBlogs(); }
+
+function renderBlogs() {
+  const q = document.getElementById('search').value.toLowerCase();
+  let blogs = ET.get('blogs');
+  if(activeFilter!=='All') blogs=blogs.filter(b=>b.cat===activeFilter);
+  if(q) blogs=blogs.filter(b=>b.title.toLowerCase().includes(q)||b.excerpt.toLowerCase().includes(q)||(b.tags||'').toLowerCase().includes(q));
+  const list = document.getElementById('blog-list');
+  if(!blogs.length){ list.innerHTML='<div style="text-align:center;padding:60px;color:var(--muted)"><div style="font-size:36px;margin-bottom:12px">📭</div>No articles found.</div>'; return; }
+  list.innerHTML = blogs.map(b=>`
+    <div class="blog-card" onclick="openPost('${b.id}')">
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="blog-cat">${b.cat}</span>
+          <span class="blog-date">📅 ${fmtDate(b.date)}</span>
+          <span class="blog-author">✍️ ${b.author}</span>
+        </div>
+        <div class="blog-title">${b.title}</div>
+        <div class="blog-excerpt">${b.excerpt}</div>
+        <div class="blog-tags">${(b.tags||'').split(',').map(t=>`<span class="blog-tag">#${t.trim()}</span>`).join('')}</div>
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <span class="blog-read">Read Article →</span>
+          <span class="blog-views">👁 ${(b.views||0).toLocaleString()} views</span>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function renderRecent() {
+  const blogs = ET.get('blogs').slice(0,5);
+  const icons = {'Income Tax':'💰','GST':'🏢','TDS':'📋','Payroll':'👷','Legal':'⚖️','Audit':'🔍'};
+  document.getElementById('recent-posts').innerHTML = blogs.map(b=>`
+    <div class="recent-item" onclick="openPost('${b.id}')">
+      <div class="ri-ico">${icons[b.cat]||'📝'}</div>
+      <div><div class="ri-title">${b.title}</div><div class="ri-date">${fmtDate(b.date)}</div></div>
+    </div>`).join('');
+}
+
+function openPost(id) {
+  const blog = ET.get('blogs').find(b=>b.id===id);
+  if(!blog) return;
+  blog.views=(blog.views||0)+1;
+  ET.set('blogs', ET.get('blogs').map(b=>b.id===id?blog:b));
+  document.getElementById('m-meta').innerHTML = `<span class="blog-cat">${blog.cat}</span><span class="blog-date" style="font-size:12px;color:var(--muted)">📅 ${fmtDate(blog.date)}</span><span style="font-size:12px;color:var(--muted)">✍️ ${blog.author}</span>`;
+  document.getElementById('m-title').textContent = blog.title;
+  document.getElementById('m-content').innerHTML = blog.content;
+  document.getElementById('modal').classList.add('open');
+  document.getElementById('modal').scrollTop = 0;
+}
+function closeModal(e){ if(e.target===e.currentTarget) document.getElementById('modal').classList.remove('open'); }
+
+renderCats(); renderBlogs(); renderRecent();
+</script>
+</body>
+</html>
